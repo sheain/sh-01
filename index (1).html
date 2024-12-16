@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>sheaindewebsite</title>
+    <link href="css/hover.css" rel="stylesheet" media="all" />
+    <style>
+            body {
+              margin: 0;
+            }
+            .button {
+              display: inline-block;
+              padding: 1em;
+              background-color: rgb(201, 157, 168);
+              text-decoration: none;
+              color: white;
+            }
+            .hvr-float {
+              display: inline-block;
+              vertical-align: middle;
+              transform: translateZ(0);
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+              backface-visibility: hidden;
+              -moz-osx-font-smoothing: grayscale;
+              transition-duration: 0.3s;
+              transition-property: transform;
+              transition-timing-function: ease-out;
+            }
+            .hvr-float:hover,
+            .hvr-float:focus,
+            .hvr-float:active {
+              transform: translateY(-8px);
+            }
+            .hvr-glow {
+              display: inline-block;
+              vertical-align: middle;
+              -webkit-transform: perspective(1px) translateZ(0);
+              transform: perspective(1px) translateZ(0);
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+              -webkit-transition-property: box-shadow;
+              transition-property: box-shadow;
+            }
+            .hvr-glow:hover,
+            .hvr-glow:focus,
+            .hvr-glow:active {
+              box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+            }
+            .hvr-fade {
+              display: inline-block;
+              vertical-align: middle;
+              -webkit-transform: perspective(1px) translateZ(0);
+              transform: perspective(1px) translateZ(0);
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+              overflow: hidden;
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+              -webkit-transition-property: color, background-color;
+              transition-property: color, background-color;
+            }
+            .hvr-fade:hover,
+            .hvr-fade:focus,
+            .hvr-fade:active {
+              background-color: #784c65;
+              color: white;
+            }
+            .hvr-shutter-out-horizontal {
+              display: inline-block;
+              vertical-align: middle;
+              -webkit-transform: perspective(1px) translateZ(0);
+              transform: perspective(1px) translateZ(0);
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+              position: relative;
+              background: #e1e1e1;
+              -webkit-transition-property: color;
+              transition-property: color;
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+            }
+            .hvr-shutter-out-horizontal:before {
+              content: "";
+              position: absolute;
+              z-index: -1;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: #000000;
+              -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+              -webkit-transform-origin: 50%;
+              transform-origin: 50%;
+              -webkit-transition-property: transform;
+              transition-property: transform;
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+              -webkit-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+            }
+            .hvr-shutter-out-horizontal:hover,
+            .hvr-shutter-out-horizontal:focus,
+            .hvr-shutter-out-horizontal:active {
+              color: white;
+            }
+            .hvr-shutter-out-horizontal:hover:before,
+            .hvr-shutter-out-horizontal:focus:before,
+            .hvr-shutter-out-horizontal:active:before {
+              -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+            }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        background: radial-gradient(
+            circle closest-side at 60% 43%,
+            #b03 26%,
+            rgba(187, 0, 51, 0) 27%
+          ),
+          radial-gradient(
+            circle closest-side at 40% 43%,
+            #b03 26%,
+            rgba(187, 0, 51, 0) 27%
+          ),
+          radial-gradient(
+            circle closest-side at 42% 22%,
+            #d35 43%,
+            rgba(221, 51, 85, 0) 45%
+          ),
+          radial-gradient(
+            circle closest-side at 58% 22%,
+            #d35 43%,
+            rgba(221, 51, 85, 0) 45%
+          ),
+          radial-gradient(
+            circle closest-side at 50% 35%,
+            #d35 32%,
+            rgba(187, 130, 141, 0) 27%
+          ),
+          radial-gradient(
+              circle closest-side at 60% 43%,
+              #b03 26%,
+              rgba(187, 0, 51, 0) 27%
+            )
+            50px 50px,
+          radial-gradient(
+              circle closest-side at 40% 43%,
+              #b03 26%,
+              rgba(187, 0, 51, 0) 27%
+            )
+            50px 50px,
+          radial-gradient(
+              circle closest-side at 40% 22%,
+              #d35 40%,
+              rgba(221, 51, 85, 0) 45%
+            )
+            52px 50px,
+          radial-gradient(
+              circle closest-side at 60% 22%,
+              #d35 40%,
+              rgba(221, 51, 85, 0) 45%
+            )
+            48px 50px,
+          radial-gradient(
+              circle closest-side at 50% 35%,
+              #d35 30%,
+              rgba(221, 51, 85, 0) 37%
+            )
+            50px 50px;
+        background-color: rgb(201, 157, 168);
+        background-size: 100px 100px;
+        text-align: center;
+        padding: 70px;
+      "
+    >
+      <img
+        src="https://www.helloimg.com/i/2024/12/10/67585c4cc7304.jpg"
+        alt="she"
+        width="80px"
+        height="80px"
+        class="hvr-glow"
+      />
+    </div>
+    <div
+      style="
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 15px;
+        line-height: 1.7;
+        text-align: center;
+        color: rgb(201, 157, 168);
+        font-family: fantasy;
+      "
+    >
+      <a href="#" class="button hvr-fade">哈喽</a>
+      <p>Thats my first website</p>
+      <p>hello world</p>
+      <a
+        href="#"
+        style="display: inline-block; padding: 5px; color: black"
+        class="hvr-shutter-out-horizontal"
+        >我不是zbi粉丝</a
+      >
+    </div>
+    <div
+      style="
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 80px;
+        font-size: 12px;
+        font-family: 'Times New Roman', Times, serif;
+      "
+    >
+      <p>sheain</p>
+      <a href="#" class="button hvr-float">鼠标悬浮体验区</a>
+      <p></p>
+      <a href="https://space.bilibili.com/1414351987" class="hvr-float"
+        >ZEROBASEONE</a
+      >
+    </div>
+  </body>
+</html>
